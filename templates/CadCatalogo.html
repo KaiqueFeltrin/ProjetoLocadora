@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estiloCadCatalogo.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecalho">
+
+    <div>
+        <a href="/home"> <img  class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+        <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+        <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+        <a href="/clientes" class="menu__link">CLIENTES</a>
+    </div>
+
+</header>
+<h1 class="texto">CADASTRAR FILMES</h1>
+<form class="form" action="/criarCatalogo" method="post">
+
+    <img class="imgLogin" src="../static/Imagens/logo2.png" alt="Logo" width="200px">
+        <div class="flex">
+            <label>
+                <input id="nome" name="nome" class="input" type="text" placeholder="Nome do Filme" required="">
+            </label>
+        </div>
+
+    <label>
+        <input id="categoria" name="categoria" class="input" type="text" placeholder="Categoria" required="">
+    </label>
+
+    <label>
+        <input id="diretor" name="diretor" class="input" type="text" placeholder="Diretor" required="">
+    </label>
+    <label>
+        <input id="dataDeLancamento" name="dataDeLancamento" class="input" type="date" placeholder="Data De Lançamento" required="">
+    </label>
+
+
+    <button class="submit">Cadastrar </button>
+</form>
+
+</body>
+</html>

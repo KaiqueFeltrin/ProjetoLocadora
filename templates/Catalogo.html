@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/exibirCatalogo.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+
+        <div>
+            <a href="/home"> <img class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+            <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+            <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+            <a href="/clientes" class="menu__link">CLIENTES</a>
+        </div>
+    </header>
+
+    <a href="/cadastrarCatalogo" class="btn-23">
+      <span class="text">Cadastrar Filmes</span>
+      <span aria-hidden="" class="marquee">Cadastrar Filmes</span>
+    </a>
+
+{#    <div class="formcat">#}
+{#        {% for Catalogos in ListaCatalogo %}#}
+{#            <div class="estudante-card2">#}
+{##}
+{#                <h2>{{ Catalogos [1] }}</h2>#}
+{#                <img class="foto" src="/imagem/{{ Catalogos [0] }}">#}
+{#                <p> <strong>Data de Lançamento:</strong> {{ Catalogos [2] }}</p>#}
+{#                <p> <strong>Diretor:</strong> {{ Catalogos [3] }}</p>#}
+{#                <p> <strong>Categoria:</strong> {{ Catalogos [4] }}</p>#}
+{##}
+{#                <div class="btnprincipal">#}
+{#                     <a href="/editarCatalogo/{{ Catalogos[0] }}" class="submit1">Editar</a>#}
+{#                    <a href="/excluirCatalogo/{{ Catalogos[0] }}" class="submit1">Excluir</a>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+
+
+
+    <div class="containertabela">
+     <table class="tabela">
+      <thead>
+        <tr>
+          <th>Nome Completo</th>
+          <th>Data de Lançamento</th>
+          <th>Diretor</th>
+          <th>Categoria</th>
+            <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for Catalogos in ListaCatalogo %}
+            <tr>
+                <td>{{ Catalogos [1] }}</td>
+                <td>{{ Catalogos [2] }}</td>
+                <td>{{ Catalogos [3] }}</td>
+                <td>{{ Catalogos [4] }}</td>
+                <td>
+                    <a href="/editarCatalago/{{ Catalogos[0] }}"><img class="icone" src="/static/Imagens/editar.png"></a>
+                    <a href="/excluirCatalogo/{{ Catalogos[0] }}"><img class="icone" src="/static/Imagens/excluir.png"></a>
+                </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+    </div>
+
+</body>
+</html>

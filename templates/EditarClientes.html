@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estiloEditarClientes.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecalho">
+
+    <div>
+        <a href="/home"> <img  class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+        <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+        <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+        <a href="/clientes" class="menu__link">CLIENTES</a>
+    </div>
+
+</header>
+<h1 class="texto">EDITAR CLIENTES</h1>
+<form class="form" action="/alterarCliente/{{ Cliente [0] }}" method="post">
+
+    <img class="imgLogin" src="../static/Imagens/logo2.png" alt="Logo" width="200px">
+        <div class="flex">
+            <label>
+                <input class="input" name="nome" type="text" value="{{ Cliente [1] }}" placeholder="Nome" required="">
+            </label>
+        </div>
+
+    <label>
+        <input class="input" name="cpf" value="{{ Cliente [2] }}" type="number" placeholder="CPF" required="">
+    </label>
+
+    <label>
+        <input class="input" name="email" value="{{ Cliente [3] }}" type="text" placeholder="Email" required="">
+    </label>
+    <label>
+        <input class="input" name="telefone" value="{{ Cliente [4] }}" type="number" placeholder="Telefone" required="">
+    </label>
+    <label>
+        <input class="input" name="endereco" value="{{ Cliente [5] }}" type="text" placeholder="Endereço" required="">
+    </label>
+
+    <div class="submit2">
+        <a href="/clientes" ><button  class="submit1">Salvar</button></a>
+    </div>
+
+</form>
+
+</body>
+</html>

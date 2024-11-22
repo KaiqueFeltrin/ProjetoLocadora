@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estiloCadClientes.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecalho">
+
+    <div>
+        <a href="/home"> <img  class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+        <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+        <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+        <a href="/clientes" class="menu__link">CLIENTES</a>
+    </div>
+
+</header>
+<h1 class="texto">CADASTRAR LOCAÇÃO</h1>
+<form class="form" action="/criarLocacao" method="post">
+    <img class="imgLogin" src="../static/Imagens/logo2.png" alt="Logo" width="200px">
+        <div class="flex">
+            <label>
+                <input id="nomedofilme" name="nomedofilme" class="input" type="text" placeholder="Nome do Filme" required="">
+            </label>
+
+        </div>
+
+            <label>
+                <input id="preco" name="preco" class="input" type="number" placeholder="Preço" required="">
+            </label>
+
+    <label>
+        <input id="destinatario" name="destinatario" class="input" type="text" placeholder="Nome do Destinatário " required="">
+    </label>
+    <label>
+        <input id="data" name="data" class="input" type="date" placeholder="Data De Locação" required="">
+    </label>
+
+
+        <button  class="submit1">Salvar</button>
+
+</form>
+
+</body>
+</html>

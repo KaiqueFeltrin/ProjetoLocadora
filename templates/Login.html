@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estilousuario.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="texto">LOGAR</h1>
+<form class="form" method="POST" action="/autenticar">
+
+    <img class="imgLogin" src="../static/Imagens/logo2.png" alt="Logo" width="200px">
+
+    <div class="flex">
+        <label>
+            <input id="usuario" name="usuario" class="input" type="text" placeholder="Usuário" required="">
+        </label>
+    </div>
+
+    <label>
+        <input id="senha" name="senha" class="input" type="password" placeholder="Senha" required="">
+    </label>
+
+    <a href="/catalogo"> <button class="submit">Logar </button> </a>
+</form>
+
+<!-- Exibir mensagem de erro se houver um flash -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <span class="title">{{ messages[0] }}</span>
+
+    <script>
+        // Função para ocultar a mensagem de flash
+        function hideFlashMessage() {
+            const flashMessage = document.getElementById('flashMessage');
+            flashMessage.classList.add('hidden');
+        }
+        // Configura um temporizador para chamar a função após 3 segundos
+        setTimeout(hideFlashMessage, 3000); // 3000 ms = 3 segundos
+    </script>
+    {% endif %}
+{% endwith %}
+
+</body>
+</html>

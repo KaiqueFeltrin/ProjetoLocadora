@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/locacao.css">
+</head>
+<body>
+<header class="cabecalho">
+    <div>
+        <a href="/home"> <img class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+        <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+        <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+        <a href="/clientes" class="menu__link">CLIENTES</a>
+
+    </div>
+
+</header>
+    <a href="/cadastrarLocacao" class="btn-23">
+        <span class="text">Alugar Filmes</span>
+        <span aria-hidden="" class="marquee">Alugar Filmes</span>
+    </a>
+
+     <div class="containertabela">
+     <table class="tabela">
+      <thead>
+        <tr>
+          <th>Nome Do Filme</th>
+          <th>Valor</th>
+          <th>Nome Do Destinatário</th>
+          <th>Data De Locação</th>
+            <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for Locacao in ListaLocacao %}
+            <tr>
+                <td>{{ Locacao [1] }}</td>
+                <td>{{ Locacao [2] }}</td>
+                <td>{{ Locacao [3] }}</td>
+                <td>{{ Locacao [4] }}</td>
+                <td>
+                    <a href="/editarLocacao/{{ Locacao[0] }}"><img class="icone" src="/static/Imagens/editar.png"></a>
+                    <a href="/excluirLocacao/{{ Locacao[0] }}"><img class="icone" src="/static/Imagens/excluir.png"></a>
+                </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+    </div>
+
+
+
+</body>
+</html>

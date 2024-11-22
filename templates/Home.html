@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+ <!-- Mensagem de flash que desaparece automaticamente -->
+ <script>
+        // Função para ocultar a mensagem de flash
+        function hideFlashMessage() {
+            const flashMessage = document.getElementById('flashMessage');
+            flashMessage.classList.add('hidden');
+        }
+
+        // Configura um temporizador para chamar a função após 3 segundos
+        setTimeout(hideFlashMessage, 3000); // 3000 ms = 3 segundos
+ </script>
+
+<header class="cabecalho">
+    <div>
+        <a href="/home"> <img class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+        <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+        <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+        <a href="/clientes" class="menu__link">CLIENTES</a>
+    </div>
+</header>
+
+<!-- Exibir mensagem de erro se houver um flash -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div id="flashMessage" class="flash-message">
+        <div class="image">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#000000" d="M20 7L9.00004 18L3.99994 13"></path>
+                </g>
+            </svg>
+        </div>
+        <span class="title">{{ messages[0] }}</span>
+    </div>
+    <script>
+        // Função para ocultar a mensagem de flash
+        function hideFlashMessage() {
+            const flashMessage = document.getElementById('flashMessage');
+            flashMessage.classList.add('hidden');
+        }
+        // Configura um temporizador para chamar a função após 3 segundos
+        setTimeout(hideFlashMessage, 3000); // 3000 ms = 3 segundos
+    </script>
+    {% endif %}
+{% endwith %}
+
+
+    <div class="Banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="imgC" src="../static/Imagens/Filmes3.png"></div>
+                <div class="swiper-slide"><img class="imgC" src="../static/Imagens/Filmes2.png"></div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+
+
+    <div class="clientes">
+
+                <div class="clienteimg"> <img src="../static/Imagens/ClienteCerto.png"> </div>
+
+                <div class="textcad">
+                    <p class="p1"><strong>CineMagic</strong> - A Plataforma Completa para Locação de Cinemas, Cadastro de Filmes e Clientes</p>
+
+                    <p class="p3"> O <strong>CineMagic</strong> é o destino ideal para quem busca uma solução prática <br> e eficiente na locação de cinemas e gerenciamento de filmes.
+                        Nossa plataforma permite <br>que você cadastre e organize uma vasta seleção de filmes, atendendo às mais variadas <br> necessidades de exibições.</p>
+                    <p class="p2">Além disso, o <strong>CineMagic</strong> oferece um sistema integrado de cadastro de clientes, <br> facilitando o gerenciamento e a personalização de cada experiência de locação.</p>
+                    <p class="p4">Navegue, cadastre e organize seu evento com a qualidade <br> e a praticidade que o CineMagic proporciona. Aqui, o cinema está a apenas um clique de distância!</p>
+                </div>
+
+            </div>
+
+    <div class="container">
+
+      <div class="square s-1">
+          <img class="logorodape" src="../static/Imagens/LogoBranca.png">
+
+          <div class="rodapesuporte">
+
+            <div>
+                <p class="suporte">Suporte</p>
+                <div slot="accordion-header" class="puma-footer__section__title2"></div>
+                <p class="email">contato@hotmail.com</p>
+              <p class="email">(18) 99151 - 9293</p>
+
+            </div>
+
+              <div>
+                  <p class="Sobre"> Sobre a CineMagic</p>
+                  <div slot="accordion-header" class="puma-footer__section__title4"></div>
+                  <a href="/sobrenos" class="Sobre2"> Sobre a CineMagic </a>
+              </div>
+
+              <div class="rodapesuporte2">
+                  <p class="redesociais">Redes Sociais</p>
+                  <div slot="accordion-header" class="puma-footer__section__title3"></div>
+                  <div class="marcas1">
+                  <a href="https://www.facebook.com/leone.legalh"> <img  class="marcas" src="/static/face.png"> </a>
+                      <a href="https://www.instagram.com/leone.sbarbearia_/"> <img class="marcas" src="/static/instagram.png"> </a>
+                  <a href="https://wa.me/18991519293/?text=Olá você que é o Leone do boquete parafuso????😋🥵😈🐠⚽🐱"> <img class="marcas" src="/static/whatsapp.png"> </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+</div>
+
+    <div class="puma-footer__section__title"><!----><!----></div>
+
+    <div class="copyright">
+        <div class="copyright">
+            <p class="copyrightesc">© Copyright Cinelux, 2024 – Todos os direitos reservados. </p>
+        </div>
+    </div>
+
+</body>
+</html>

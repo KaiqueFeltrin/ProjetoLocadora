@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estiloCadCatalogo.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carrosel.js"></script>
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecalho">
+
+    <div>
+        <a href="/home"> <img  class="Logo" src="../static/Imagens/logo.png" width="150px"> </a>
+
+        <a href="/catalogo" class="menu__link">CATÁLOGO</a>
+        <a href="/locacao" class="menu__link">LOCAÇÃO</a>
+        <a href="/clientes" class="menu__link">CLIENTES</a>
+    </div>
+
+</header>
+<h1 class="texto">EDITAR FILMES</h1>
+<form class="form" action="/alterarCatalogo/{{ Catalogo [0] }}" method="post">
+
+    <img class="imgLogin" src="../static/Imagens/logo2.png" alt="Logo" width="200px">
+        <div class="flex">
+            <label>
+                <input class="input" value="{{ Catalogo [1] }}" name="nome" type="text" placeholder="Nome" required="">
+            </label>
+        </div>
+
+    <label>
+        <input class="input" value="{{ Catalogo [2] }}" name="dataDeLancamento" type="date" placeholder="dataDeLancamento" required="">
+    </label>
+
+    <label>
+        <input class="input" value="{{ Catalogo [3] }}" name="diretor" type="text" placeholder="Diretor" required="">
+    </label>
+    <label>
+        <input class="input" value="{{ Catalogo [4] }}" name="categoria" type="text" placeholder="Categoria" required="">
+    </label>
+
+    <div class="submit2">
+        <a href="/catalogo"><button  class="submit1">Salvar</button></a>
+    </div>
+
+</form>
+
+</body>
+</html>
