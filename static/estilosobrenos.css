@@ -1,0 +1,461 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none !important;
+}
+/* CABEÇALHO */
+
+header {
+    align-items: center;
+    justify-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+
+.Logo{
+    margin-right: 600px;
+    height: 80px;
+    width: 100px;
+    margin-left: -50px;
+}
+
+.menu__link {
+    margin-right: 100px;
+    margin-bottom: -50px;
+    text-align: center;
+}
+
+
+.Logo2{
+    margin-left: 150px;
+    color: #ffffff;
+    line-height: 2;
+    position: relative;
+    bottom: 1.5rem;
+    transition: width .4s, left .4s;
+    content: '';
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+    left: 0;
+    font-size: larger;
+    margin-top: 300px;
+}
+
+.Logo2::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+}
+
+.Logo2:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.menu__link {
+    color: #ffffff;
+    line-height: 2;
+    position: relative;
+    bottom: 1.5rem;
+    transition: width .4s, left .4s;
+    content: '';
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    left: 0;
+    font-size: larger;
+}
+.menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+}
+.menu__link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/*____________________________________________________________*/
+
+/* CORPO */
+
+.textcad {
+    text-align: justify;
+    margin-left: 300px;
+}
+
+.p1 {
+    padding: 10px;
+}
+
+.p2 {
+    padding: 10px;
+}
+.p3 {
+    padding: 10px;
+}
+.p4 {
+    padding: 10px;
+}
+
+
+.clientes {
+    display: flex;
+    align-items: center;
+}
+
+.clienteimg {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    padding: 80px;
+}
+
+p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #3d3d3d;
+    letter-spacing: 0.02em;
+}
+
+
+p strong {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.mb-5 {
+    width: 550px;
+    font-size: 32px;
+    text-align: justify;
+    margin-left: 80px;
+    margin-bottom: 60px;
+    font-family: "Poppins", sans-serif;
+}
+.classtext {
+    margin-top: 120px;
+}
+
+.escsobrenos {
+    font-size: 20px;
+    width: 740px;
+    text-align: start;
+    margin-left: 80px;
+    margin-top: -25px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 40px;
+}
+
+.topico {
+    font-size: 20px;
+    width: 550px;
+    text-align: start;
+    margin-left: 80px;
+    margin-top: 30px;
+    height: 50px;
+    font-family: "Poppins", sans-serif;
+}
+.image {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 15px 0px 15px rgba(0, 30, 39, .02), 15px 0px 15px rgba(0, 30, 39, .08);
+    margin-top: 30px;
+}
+/*____________________________________________________________*/
+
+/* RODAPÉ */
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+
+.container .square {
+  width: 1665px;
+  height: 400px;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  font-family: Verdana;
+    line-height: 100px;
+}
+
+.copyright {
+    background-color: #333;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:50px;
+}
+
+.copyrightesc {
+    font-size: 13px;
+    color: white;
+}
+
+.divsiga{
+    margin-left: -10px;
+}
+
+@media (min-width: 47.5em) {
+    .puma-footer__section_line_second .puma-footer__section__title {
+        margin-bottom: 15px;
+        border-bottom: 2px solid rgb(255, 255, 255);
+
+    }
+}
+
+@media (min-width: 47.5em) {
+    .puma-footer__section__title {
+        margin-bottom: 1px;
+    }
+}
+
+.puma-footer__section__title {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.2;
+
+}
+
+.logorodape {
+   display: flex;
+    margin-left: 50px;
+    height: 60px;
+    width: 80px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.-webkit-text-size-adjust {
+    font: 1.4rem 'FFDIN Regular',FFDIN,Arial,sans-serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    min-height: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+@media (min-width: 10em) {
+    .puma-footer__section__title2 {
+        border-bottom: 2px solid rgb(255, 255, 255);
+        width: 300px;
+        margin-left: 70px;
+    }
+
+    .puma-footer__section__title3 {
+        border-bottom: 2px solid rgb(255, 255, 255);
+        width: 450px;
+        margin-bottom: 1px;
+        margin-left: 100px;
+    }
+
+    .puma-footer__section__title4 {
+        border-bottom: 2px solid rgb(255, 255, 255);
+        width: 300px;
+        margin-bottom: -2px;
+        margin-left: 150px;
+    }
+
+}
+
+.suporte {
+    display: flex;
+    color: #FFFFFF;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.redesociais {
+    display: flex;
+    color: #FFFFFF;
+    margin-left: 80px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.email {
+    display: flex;
+    color: #b4b3b3;
+    font-size: 14px;
+    margin-left: 70px;
+    padding: 0.2em 0px;
+
+}
+
+.rodapesuporte {
+    display: flex; /* Faz com que os elementos filhos fiquem lado a lado */
+    justify-content: space-between; /* Ajusta a distribuição horizontal dos elementos */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.marcas {
+    height: 25px;
+    width: 25px;
+    margin-right: 30px;
+}
+
+.marcas1 {
+    margin-right: 170px;
+}
+
+
+.Sobre {
+    display: flex;
+    color: #FFFFFF;
+    margin-left: 130px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.Sobre2 {
+    color: #b4b3b3;
+    font-size: 14px;
+    margin-left: -20px;
+
+}
+
+.label {
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.label2 {
+    font-size: 62px;
+    line-height: 38px;
+    font-family: adineuePRO, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.labelprincipal {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.label, .label2 {
+    display: grid;
+    margin: 0;
+    padding: 15px;
+
+}
+
+.imgsobrenos {
+    height: 600px;
+    width: 600px;
+    margin-left: 500px;
+}
+
+.textsobre {
+    margin-top: 400px;
+    margin-left: 150px;
+}
+
+.label3 {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: .6px;
+    font-family: adineuePRO, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: 125px;
+    margin-top: 100px;
+}
+
+.paragrafotext {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 20px;
+    padding: 0;
+    white-space: pre-wrap;
+    text-align: justify;
+    margin-left: 300px;
+    margin-top: 60px;
+}
+
+.corpoimg {
+    height: 600px;
+    width: 1100px;
+    margin-right: 85px;
+}
+
+.corposobrenos {
+    margin-left: 80px;
+}
+
+.textcorpo2 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 20px;
+    padding: 0;
+    white-space: pre-wrap;
+    text-align: justify;
+    margin-left: 210px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    white-space: pre-wrap;
+}
+
+.textcorpo {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 20px;
+    padding: 0;
+    white-space: pre-wrap;
+    text-align: justify;
+    margin-left: 210px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    white-space: pre-wrap;
+}
+
+
+
+
+
+
+
+
